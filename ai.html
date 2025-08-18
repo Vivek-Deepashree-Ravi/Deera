@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deera AI - Advanced AI Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', 'Noto Sans Kannada', sans-serif;
+            background: #000011;
+            color: #e0e0e0;
+            min-height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* Stars Effect */
+        #stars-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            background: radial-gradient(ellipse at center, rgba(74, 20, 140, 0.1) 0%, rgba(0, 0, 0) 70%);
+        }
+        
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        
+        /* Language Switcher */
+        .language-switcher {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            margin: 0 0.25rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .lang-btn.active {
+            background: #00d4ff;
+            border-color: #00d4ff;
+        }
+        
+        /* Header Bar */
+        .header-bar {
+            position: fixed;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+        
+        .home-btn {
+            background: rgba(0, 212, 255, 0.15);
+            color: #fff;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 999px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .home-btn:hover {
+            background: #00d4ff;
+            transform: translateY(-2px) scale(1.04);
+        }
+        
+        .content {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+            min-height: 100vh;
+            padding-top: 8rem;
+            padding-bottom: 4rem;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 4rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, #00d4ff, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease-in-out infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .ai-subtitle {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #888;
+            margin-bottom: 4rem;
+            line-height: 1.6;
+        }
+        
+        .ai-products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .ai-product-card {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .ai-product-card:hover {
+            background: rgba(0, 212, 255, 0.2);
+            border-color: rgba(0, 212, 255, 0.6);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+        
+        .ai-product-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #00d4ff;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .ai-product-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #b0b0b0;
+        }
+        
+        .ai-product-card .features {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(0, 212, 255, 0.2);
+        }
+        
+        .ai-product-card .features ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .ai-product-card .features li {
+            font-size: 0.95rem;
+            color: #888;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border-left: 2px solid #00d4ff;
+        }
+        
+        .in-house-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #00d4ff, #4ecdc4);
+            color: #000;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+        
+        .coming-soon {
+            text-align: center;
+            font-size: 2rem;
+            color: #00d4ff;
+            margin-top: 4rem;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content {
+                padding: 1rem;
+                padding-top: 6rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .ai-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .ai-products-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .ai-product-card {
+                padding: 1.5rem;
+            }
+            
+            .ai-product-card h3 {
+                font-size: 1.3rem;
+            }
+            
+            .ai-product-card p {
+                font-size: 1rem;
+            }
+            
+            .coming-soon {
+                font-size: 1.5rem;
+            }
+            
+            .header-bar {
+                top: 1rem;
+            }
+            
+            .language-switcher {
+                top: 1rem;
+                right: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="stars-container"></div>
+    
+    <div class="language-switcher">
+        <button class="lang-btn active" aria-label="Switch to English" onclick="switchLanguage('en', event)">EN</button>
+        <button class="lang-btn" aria-label="Switch to Kannada" onclick="switchLanguage('kn', event)">ಕನ್ನಡ</button>
+    </div>
+    
+    <div class="header-bar">
+        <button class="home-btn" onclick="window.location.href='index.html'"><span>🏠 Home</span></button>
+    </div>
+
+    <div class="content">
+        <h1 id="ai-title">Deera AI</h1>
+        <p class="ai-subtitle" id="ai-subtitle">Advanced AI Solutions for the Future</p>
+        <div class="ai-products-grid">
+            <div class="ai-product-card">
+                <h3><span>🎙️</span> <span id="stt-title">Speech-to-Text (STT)</span></h3>
+                <p id="stt-desc">Convert spoken words into text with high accuracy and real-time processing.</p>
+                <div class="features">
+                    <ul>
+                        <li id="stt-feature-1">High accuracy: 98%+</li>
+                        <li id="stt-feature-2">Real-time processing</li>
+                        <li id="stt-feature-3">Multiple languages support</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="ai-product-card">
+                <h3><span>🗣️</span> <span id="tts-title">Text-to-Speech (TTS)</span></h3>
+                <p id="tts-desc">Transform text into natural-sounding speech for various applications.</p>
+                <div class="features">
+                    <ul>
+                        <li id="tts-feature-1">Natural sounding voices</li>
+                        <li id="tts-feature-2">Multiple language support</li>
+                        <li id="tts-feature-3">Customizable speech parameters</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="ai-product-card">
+                <h3><span>🤖</span> <span id="chatbot-title">Chatbot</span></h3>
+                <p id="chatbot-desc">Intelligent conversational AI for engaging interactions and information retrieval.</p>
+                <div class="features">
+                    <ul>
+                        <li id="chatbot-feature-1">Advanced intent recognition</li>
+                        <li id="chatbot-feature-2">Contextual conversation</li>
+                        <li id="chatbot-feature-3">Multi-turn dialogue</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="ai-product-card">
+                <h3><span>🧠</span> <span id="llm-title">Large Language Model (LLM)</span></h3>
+                <p id="llm-desc">Powerful AI model for advanced natural language understanding and generation.</p>
+                <div class="features">
+                    <ul>
+                        <li id="llm-feature-1">Advanced language understanding</li>
+                        <li id="llm-feature-2">Creative text generation</li>
+                        <li id="llm-feature-3">Contextual reasoning</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="ai-product-card">
+                <h3><span>👁️</span> <span id="vlm-title">Vision Language Model (VLM)</span></h3>
+                <p id="vlm-desc">Combine vision and language to understand and generate images and videos.</p>
+                <div class="features">
+                    <ul>
+                        <li id="vlm-feature-1">Image and video understanding</li>
+                        <li id="vlm-feature-2">Creative image generation</li>
+                        <li id="vlm-feature-3">Visual storytelling</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="ai-product-card">
+                <h3><span>👆</span> <span id="vam-title">Visual Action Model</span></h3>
+                <p id="vam-desc">Understand and execute visual actions from images and videos.</p>
+                <div class="features">
+                    <ul>
+                        <li id="vam-feature-1">Action recognition</li>
+                        <li id="vam-feature-2">Object manipulation</li>
+                        <li id="vam-feature-3">Scene understanding</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <p class="coming-soon" id="coming-soon">More AI Solutions Coming Soon...</p>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Create stars effect
+        function createStars() {
+            const starsContainer = document.getElementById('stars-container');
+            const starCount = 100;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+        
+        // Initialize stars when page loads
+        window.addEventListener('DOMContentLoaded', createStars);
+        
+        // Initialize language switching
+        window.addEventListener('load', () => {
+            // Get the current language from localStorage or default to English
+            const currentLang = localStorage.getItem('deeraLang') || 'en';
+            switchLanguage(currentLang);
+        });
+    </script>
+</body>
+</html>

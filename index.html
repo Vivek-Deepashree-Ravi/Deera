@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deera Robotics & AI - Coming Soon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body class="fade-in">
+    <div id="stars-container"></div>
+    <canvas id="tesseract-canvas"></canvas>
+    
+    <div class="language-switcher corner">
+        <button class="lang-btn active" aria-label="Switch to English" onclick="switchLanguage('en', event)">EN</button>
+        <button class="lang-btn" aria-label="Switch to Kannada" onclick="switchLanguage('kn', event)">ಕನ್ನಡ</button>
+    </div>
+    <div class="header-bar">
+        <nav class="main-nav">
+            <button class="about-btn" aria-label="About" onclick="fadeNavigate('about.html')"><i data-lucide="info"></i> <span>About</span></button>
+            <button class="product-btn" aria-label="Product" onclick="fadeNavigate('product.html')"><i data-lucide="package"></i> <span>Product</span></button>
+            <button class="careers-btn" aria-label="Careers" onclick="fadeNavigate('careers.html')"><i data-lucide="briefcase"></i> <span>Careers</span></button>
+            <button class="contact-btn" aria-label="Contact" onclick="fadeNavigate('contact.html')"><i data-lucide="mail"></i> <span>Contact</span></button>
+            <button class="ai-btn" aria-label="AI" onclick="fadeNavigate('ai.html')"><i data-lucide="bot"></i> <span>AI</span></button>
+        </nav>
+    </div>
+
+    <div class="content">
+        <div class="logo" id="logo">Deera</div>
+        <div class="tagline" id="tagline">Pioneering the future of robotics and artificial intelligence</div>
+        <div class="coming-soon" id="coming-soon">Coming Soon</div>
+    </div>
+
+<script>
+        console.log('Canvas container exists:', document.getElementById('canvas-container') !== null);
+        console.log('Three.js library loaded:', typeof THREE !== 'undefined');
+    </script>
+    <script src="script.js"></script>
+    <script>
+        function fadeNavigate(url) {
+            document.body.classList.remove('fade-in');
+            document.body.classList.add('fade-out');
+            setTimeout(() => { window.location.href = url; }, 350);
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) window.lucide.createIcons();
+        });
+    </script>
+</body>
+</html>

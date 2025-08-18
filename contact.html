@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Deera Robotics & AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', 'Noto Sans Kannada', sans-serif;
+            background: #000011;
+            color: #e0e0e0;
+            min-height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* Stars Effect */
+        #stars-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            background: radial-gradient(ellipse at center, rgba(74, 20, 140, 0.1) 0%, rgba(0, 0, 0) 70%);
+        }
+        
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        
+        /* Language Switcher */
+        .language-switcher {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            margin: 0 0.25rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .lang-btn.active {
+            background: #00d4ff;
+            border-color: #00d4ff;
+        }
+        
+        .content {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+            min-height: 100vh;
+            padding-top: 8rem;
+            padding-bottom: 4rem;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, #00d4ff, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .contact-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(0, 212, 255, 0.6);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+        }
+        
+        .investor-card {
+            border-left: 4px solid #00d4ff;
+        }
+        
+        .product-card {
+            border-left: 4px solid #4ecdc4;
+        }
+        
+        .contact-header h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #00d4ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-content p {
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+        
+        .contact-email {
+            text-align: center;
+        }
+        
+        .contact-email .email-link {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            color: #00d4ff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-email .email-link:hover {
+            background: rgba(0, 212, 255, 0.2);
+            border-color: rgba(0, 212, 255, 0.6);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.3);
+        }
+        
+        .header-bar {
+            position: fixed;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+        
+        .home-btn {
+            background: rgba(0, 212, 255, 0.15);
+            color: #fff;
+            border: none;
+            padding: 0.7rem 2.2rem;
+            border-radius: 999px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+        }
+        
+        .home-btn:hover {
+            background: #00d4ff;
+            transform: translateY(-2px) scale(1.04);
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 1rem;
+                padding-top: 6rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .contact-header h3 {
+                font-size: 1.5rem;
+            }
+            
+            .language-switcher {
+                top: 1rem;
+                right: 1rem;
+            }
+            
+            .header-bar {
+                top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="stars-container"></div>
+    
+    <div class="language-switcher">
+        <button class="lang-btn active" aria-label="Switch to English" onclick="switchLanguage('en', event)">EN</button>
+        <button class="lang-btn" aria-label="Switch to Kannada" onclick="switchLanguage('kn', event)">ಕನ್ನಡ</button>
+    </div>
+    
+    <div class="header-bar">
+        <button class="home-btn" onclick="window.location.href='index.html'"><span>🏠 Home</span></button>
+    </div>
+
+    <div class="content">
+        <h1 id="contact-title">📞 ಸಂಪರ್ಕಿಸಿ – ದೀರ</h1>
+        
+        <div class="contact-grid">
+            <!-- For Investors -->
+            <div class="contact-card investor-card">
+                <div class="contact-header">
+                    <h3>💼 <span id="investor-title">ಹೂಡಿಕೆದಾರರಿಗಾಗಿ</span></h3>
+                </div>
+                <div class="contact-content">
+                    <p id="investor-desc">ರೋಬೋಟಿಕ್ಸ್ ಮತ್ತು AI ಯ ಭವಿಷ್ಯವನ್ನು ರೂಪಿಸಲು ನಮ್ಮ ಜೊತೆ ಸೇರಿ—ನಿಮ್ಮ ಹೂಡಿಕೆ ಮಾನವ ಪ್ರಗತಿಯ ಮುಂದಿನ ಹೆಜ್ಜೆಗೆ ಇಂಧನವಾಗುತ್ತದೆ.</p>
+                    <div class="contact-email">
+                        <a href="mailto:vivek.deepashreeravi@gmail.com" class="email-link">
+                            <span class="email-icon">📧</span>
+                            <span class="email-text">vivek.deepashreeravi@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- For Product & Service Enquiries -->
+            <div class="contact-card product-card">
+                <div class="contact-header">
+                    <h3>⚙️ <span id="product-title">ಉತ್ಪನ್ನ ಮತ್ತು ಸೇವಾ ವಿಚಾರಣೆಗಳಿಗಾಗಿ</span></h3>
+                </div>
+                <div class="contact-content">
+                    <p id="product-desc">ನಮ್ಮ ರೋಬೋಟ್‌ಗಳು ಮತ್ತು AI ಏಜೆಟ್‌ಗಳು ನಿಮ್ಮ ಕೈಗಾರಿಕೆ, ಕೃಷಿ ಅಥವಾ ಮನೆಗೆ ಹೇಗೆ ಬದಲಾವಣೆ ತರುತ್ತವೆ ಎಂಬುದನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ—ನಮ್ಮ ತಂಡ ಸಹಾಯ ಮಾಡಲು ಇಲ್ಲಿದೆ.</p>
+                    <div class="contact-email">
+                        <a href="mailto:vivek.deepashreeravi@gmail.com" class="email-link">
+                            <span class="email-icon">📧</span>
+                            <span class="email-text">vivek.deepashreeravi@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Create stars effect
+        function createStars() {
+            const starsContainer = document.getElementById('stars-container');
+            const starCount = 100;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+        
+        // Initialize stars when page loads
+        window.addEventListener('DOMContentLoaded', createStars);
+        
+        // Initialize language switching
+        window.addEventListener('load', () => {
+            // Get the current language from localStorage or default to Kannada
+            const currentLang = localStorage.getItem('deeraLang') || 'kn';
+            switchLanguage(currentLang);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Deera Robotics & AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Kannada', sans-serif;
+            background: #000011;
+            color: #e0e0e0;
+            min-height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .content {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+            min-height: 100vh;
+            padding-top: 8rem;
+            padding-bottom: 4rem;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            align-items: start;
+            gap: 2.5rem;
+        }
+
+        .about-left {
+            position: sticky;
+            top: 6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+        }
+
+        .about-right {}
+
+        #about-tagline {
+            font-size: 2.2rem;
+            line-height: 1.3;
+            font-weight: 700;
+            text-align: center;
+            background: linear-gradient(45deg, #00d4ff, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            max-width: 100%;
+            padding: 2rem;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, #00d4ff, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: justify;
+            color: #b0b0b0;
+            white-space: pre-line;
+        }
+        
+        .language-switcher {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            margin: 0 0.25rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .lang-btn.active {
+            background: #00d4ff;
+            border-color: #00d4ff;
+        }
+        
+        .home-btn {
+            background: rgba(0, 212, 255, 0.15);
+            color: #fff;
+            border: none;
+            padding: 0.7rem 2.2rem;
+            border-radius: 999px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+            position: fixed;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+        
+        .home-btn:hover {
+            background: #00d4ff;
+            transform: translateX(-50%) translateY(-2px) scale(1.04);
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 1rem;
+                padding-top: 6rem;
+            }
+            .about-grid { grid-template-columns: 1fr; }
+            .about-left { 
+                position: static; 
+                min-height: auto;
+                padding: 2rem 0;
+            }
+            #about-tagline { text-align: center; font-size: 1.6rem; }
+            
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+            
+            p {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+            
+            .language-switcher {
+                top: 1rem;
+                right: 1rem;
+            }
+            
+            .home-btn {
+                top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="stars-container"></div>
+    <div class="header-bar">
+        <button class="home-btn" onclick="location.href='index.html'"><span>🏠 Home</span></button>
+    </div>
+    <div class="language-switcher corner">
+        <button class="lang-btn active" aria-label="Switch to English" onclick="switchLanguage('en', event)">EN</button>
+        <button class="lang-btn" aria-label="Switch to Kannada" onclick="switchLanguage('kn', event)">ಕನ್ನಡ</button>
+    </div>
+    <div class="content">
+        <div class="about-grid">
+            <div class="about-left">
+                <div id="about-tagline">Building a world where industries, farms, and homes thrive, while our robots and AI agents handle the rest.</div>
+            </div>
+            <aside class="about-right">
+                <h1 id="about-title">About Deera Robotics & AI</h1>
+                <p id="about-text">Deera Robotics & AI is a technology company based in Bengaluru, India, dedicated to advancing the future of robotics and artificial intelligence. Our work spans industrial automation, factory and farming robotics, AI-powered agents for enterprises, and intelligent home assistance.
+
+Our flagship robot, Aris, is designed to enhance productivity and safety in industries, factories, and agriculture. In parallel, we are building advanced AI agents for personal assistance, customer support, booking management, and digital operations, helping businesses and individuals achieve greater efficiency.
+
+At home, our Rishi AI platform enables smart automation and personal assistance, making everyday living more seamless, connected, and intelligent. Together, our robotics and AI systems are shaping the foundation for a smarter and more abundant society.</p>
+            </aside>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
