@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <style>
         body {
             font-family: 'Inter', 'Noto Sans Kannada', sans-serif;
@@ -22,9 +23,9 @@
         }
         
         .content {
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 2rem 4rem;
+            width: 100%;
+            margin: 0;
             position: relative;
             z-index: 10;
             min-height: 100vh;
@@ -34,21 +35,25 @@
 
         .about-grid {
             display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            align-items: start;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            justify-content: center;
             gap: 2.5rem;
         }
 
         .about-left {
-            position: sticky;
-            top: 6rem;
+            position: static;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 60vh;
+            min-height: auto;
         }
 
-        .about-right {}
+        .about-right { 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
         #about-tagline {
             font-size: 2.2rem;
@@ -59,8 +64,9 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            max-width: 100%;
+            max-width: 48ch;
             padding: 2rem;
+            margin: 0 auto;
         }
         
         h1 {
@@ -79,6 +85,12 @@
             text-align: justify;
             color: #b0b0b0;
             white-space: pre-line;
+        }
+
+        #about-text {
+            max-width: 72ch;
+            margin: 0 auto;
+            text-align: center;
         }
         
         .language-switcher {
@@ -112,26 +124,7 @@
             border-color: #00d4ff;
         }
         
-        .home-btn {
-            background: rgba(0, 212, 255, 0.15);
-            color: #fff;
-            border: none;
-            padding: 0.7rem 2.2rem;
-            border-radius: 999px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: background 0.2s, transform 0.2s;
-            position: fixed;
-            top: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-        }
-        
-        .home-btn:hover {
-            background: #00d4ff;
-            transform: translateX(-50%) translateY(-2px) scale(1.04);
-        }
+        /* Removed old fixed-position home button styles to use nav button instead */
         
         @media (max-width: 768px) {
             .content {
@@ -170,27 +163,44 @@
 <body>
     <div id="stars-container"></div>
     <div class="header-bar">
-        <button class="home-btn" onclick="location.href='index.html'"><span>🏠 Home</span></button>
+        <nav class="main-nav">
+            <button class="home-btn" aria-label="Home" onclick="fadeNavigate('index.html')"><i data-lucide="home"></i> <span>Home</span></button>
+            <button class="about-btn" aria-label="About" onclick="fadeNavigate('about.html')"><i data-lucide="info"></i> <span>About</span></button>
+            <button class="product-btn" aria-label="Product" onclick="fadeNavigate('product.html')"><i data-lucide="package"></i> <span>Product</span></button>
+            <button class="careers-btn" aria-label="Careers" onclick="fadeNavigate('careers.html')"><i data-lucide="briefcase"></i> <span>Careers</span></button>
+            <button class="contact-btn" aria-label="Contact" onclick="fadeNavigate('contact.html')"><i data-lucide="mail"></i> <span>Contact</span></button>
+            <button class="ai-btn" aria-label="AI" onclick="fadeNavigate('ai.html')"><i data-lucide="bot"></i> <span>AI</span></button>
+        </nav>
     </div>
     <div class="language-switcher corner">
         <button class="lang-btn active" aria-label="Switch to English" onclick="switchLanguage('en', event)">EN</button>
         <button class="lang-btn" aria-label="Switch to Kannada" onclick="switchLanguage('kn', event)">ಕನ್ನಡ</button>
     </div>
     <div class="content">
+        <h1 id="about-title">About Deera Robotics & AI</h1>
         <div class="about-grid">
             <div class="about-left">
                 <div id="about-tagline">Building a world where industries, farms, and homes thrive, while our robots and AI agents handle the rest.</div>
             </div>
             <aside class="about-right">
-                <h1 id="about-title">About Deera Robotics & AI</h1>
                 <p id="about-text">Deera Robotics & AI is a technology company based in Bengaluru, India, dedicated to advancing the future of robotics and artificial intelligence. Our work spans industrial automation, factory and farming robotics, AI-powered agents for enterprises, and intelligent home assistance.
 
-Our flagship robot, Aris, is designed to enhance productivity and safety in industries, factories, and agriculture. In parallel, we are building advanced AI agents for personal assistance, customer support, booking management, and digital operations, helping businesses and individuals achieve greater efficiency.
+In parallel, we are building advanced AI agents for personal assistance, customer support, booking management, and digital operations, helping businesses and individuals achieve greater efficiency.
 
 At home, our Rishi AI platform enables smart automation and personal assistance, making everyday living more seamless, connected, and intelligent. Together, our robotics and AI systems are shaping the foundation for a smarter and more abundant society.</p>
             </aside>
         </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        function fadeNavigate(url) {
+            document.body.classList.remove('fade-in');
+            document.body.classList.add('fade-out');
+            setTimeout(() => { window.location.href = url; }, 350);
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) window.lucide.createIcons();
+        });
+    </script>
 </body>
 </html>

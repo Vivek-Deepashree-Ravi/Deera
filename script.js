@@ -9,7 +9,7 @@ const languages = {
         contact: "Contact",
         product: "Products",
         aboutTitle: "About Deera Robotics & AI",
-        aboutText: "Deera Robotics & AI is a technology company based in Bengaluru, India, dedicated to advancing the future of robotics and artificial intelligence. Our work spans industrial automation, factory and farming robotics, AI-powered agents for enterprises, and intelligent home assistance.\n\nOur flagship robot, Aris, is designed to enhance productivity and safety in industries, factories, and agriculture. In parallel, we are building advanced AI agents for personal assistance, customer support, booking management, and digital operations, helping businesses and individuals achieve greater efficiency.\n\nAt home, our Rishi AI platform enables smart automation and personal assistance, making everyday living more seamless, connected, and intelligent. Together, our robotics and AI systems are shaping the foundation for a smarter and more abundant society.",
+        aboutText: "Deera Robotics & AI is a technology company based in Bengaluru, India, dedicated to advancing the future of robotics and artificial intelligence. Our work spans industrial automation, factory and farming robotics, AI-powered agents for enterprises, and intelligent home assistance. In parallel, we are building advanced AI agents for personal assistance, customer support, booking management, and digital operations, helping businesses and individuals achieve greater efficiency. At home, our Rishi AI platform enables smart automation and personal assistance, making everyday living more seamless, connected, and intelligent. Together, our robotics and AI systems are shaping the foundation for a smarter and more abundant society.",
         aboutTagline: "Building a world where industries, farms, and homes thrive, while our robots and Risi Home automation handle the rest.",
         careersTitle: "Careers at Deera",
         careersText: "We are always looking for talented individuals to join our team. Stay tuned for job openings and opportunities to work with us!",
@@ -45,7 +45,7 @@ const languages = {
         investorDesc: "Partner with us to shape the future of robotics and AI—your investment fuels the next leap in human progress.",
         productTitle: "For Product & Service Enquiries",
         productDesc: "Discover how our robots and AI agents can transform your industry, farm, or home—our team is here to assist you.",
-        contactText: "For inquiries, please email us at <a href=\"mailto:info@deera.com\">info@deera.com</a>.",
+        contactText: "For inquiries, please email us at <a href=\"mailto:ceo@deera.live\">ceo@deera.live</a>.",
         
         // ✅ Products page
         productsTitle: "Our Products",
@@ -117,7 +117,7 @@ const languages = {
         contact: "ಸಂಪರ್ಕ",
         product: "ಉತ್ಪನ್ನಗಳು",
         aboutTitle: "ದೀರ ರೋಬೋಟಿಕ್ಸ್ ಮತ್ತು ಎಐ ಬಗ್ಗೆ",
-        aboutText: "ಡೀರಾ ರೋಬೋಟಿಕ್ಸ್ ಮತ್ತು ಎಐ ಬೆಂಗಳೂರು, ಭಾರತದಲ್ಲಿ ಆಧಾರಿತ ತಂತ್ರಜ್ಞಾನ ಕಂಪನಿಯಾಗಿದ್ದು, ರೋಬೋಟಿಕ್ಸ್ ಮತ್ತು ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆಯ ಭವಿಷ್ಯವನ್ನು ಮುನ್ನಡೆಸಲು ಸಮರ್ಪಿತವಾಗಿದೆ. ನಮ್ಮ ಕೆಲಸವು ಕೈಗಾರಿಕಾ ಸ್ವಯಂಕ್ರಿಯೆ, ಕಾರ್ಖಾನೆ ಮತ್ತು ಕೃಷಿ ರೋಬೋಟಿಕ್ಸ್, ಉದ್ಯಮಗಳಿಗೆ ಎಐ ಏಜೆಂಟ್‌ಗಳು ಮತ್ತು ಬುದ್ಧಿವಂತ ಗೃಹ ಸಹಾಯಕತೆ ಕ್ಷೇತ್ರಗಳನ್ನು ಒಳಗೊಂಡಿದೆ.\n\nನಮ್ಮ ಫ್ಲ್ಯಾಗ್‌ಶಿಪ್ ರೋಬೋಟ್ ಅರಿಸ್, ಕೈಗಾರಿಕೆ, ಕಾರ್ಖಾನೆಗಳು ಮತ್ತು ಕೃಷಿ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಉತ್ಪಾದಕತೆ ಮತ್ತು ಸುರಕ್ಷತೆಯನ್ನು ಹೆಚ್ಚಿಸಲು ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ. ಜೊತೆಗೆ, ನಾವು ವೈಯಕ್ತಿಕ ಸಹಾಯ, ಗ್ರಾಹಕ ಬೆಂಬಲ, ಬುಕಿಂಗ್ ನಿರ್ವಹಣೆ ಮತ್ತು ಡಿಜಿಟಲ್ ಕಾರ್ಯಾಚರಣೆಗಳಗಾಗಿ ಉನ್ನತ ಎಐ ಏಜೆಟ್‌ಗಳನ್ನು ನಿರ್ಮಿಸುತ್ತಿದ್ದೇವೆ, ಇದು ಉದ್ಯಮಗಳು ಮತ್ತು ವ್ಯಕ್ತಿಗಳಿಗೆ ಹೆಚ್ಚಿನ ದಕ್ಷತೆಯನ್ನು ತಂದುಕೊಡುತ್ತದೆ.\n\nಮನೆಗಳಲ್ಲಿ, ನಮ್ಮ ರಿಷಿ ಎಐ ವೇದಿಕೆ ಸ್ಮಾರ್ಟ್ ಆಟೋಮೇಷನ್ ಮತ್ತು ವೈಯಕ್ತಿಕ ಸಹಾಯವನ್ನು ಸಾಧ್ಯವಾಗಿಸುತ್ತಿದ್ದು, ದೈನಂದಿನ ಜೀವನವನ್ನು ಇನ್ನಷ್ಟು ಸುಗಮ, ಸಂಪರ್ಕಿತ ಮತ್ತು ಬುದ್ಧಿವಂತವಾಗಿಸುತ್ತದೆ. ನಮ್ಮ ರೋಬೋಟಿಕ್ಸ್ ಮತ್ತು ಎಐ ವ್ಯವಸ್ಥೆಗಳು ಒಟ್ಟಾಗಿ ಸಮೃದ್ಧ ಮತ್ತು ಬುದ್ಧಿವಂತ ಸಮಾಜದ ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುತ್ತಿವೆ.",
+        aboutText: "ದೀರ ರೋಬೋಟಿಕ್ಸ್ & AI ಬೆಂಗಳೂರು, ಭಾರತದ ತಂತ್ರಜ್ಞಾನ ಕಂಪನಿ ಆಗಿದ್ದು, ರೋಬೋಟಿಕ್ಸ್ ಮತ್ತು ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆಯ ಭವಿಷ್ಯವನ್ನು ಮುಂದುವರಿಸುವುದಕ್ಕೆ ಸಮರ್ಪಿತವಾಗಿದೆ. ನಮ್ಮ ಕೆಲಸವು ಕೈಗಾರಿಕಾ ಸ್ವಯಂಚಾಲನೆ, ಕಾರ್ಖಾನೆ ಮತ್ತು ಕೃಷಿ ರೋಬೋಟಿಕ್ಸ್, ಎಂಟರ್‌ಪ್ರೈಸ್‌ಗಳಿಗೆ AI ಚಾಲಿತ ಏಜೆಂಟ್‌ಗಳು, ಮತ್ತು ಬುದ್ಧಿವಂತ ಮನೆ ಸಹಾಯ ಸೇವೆಗಳವರೆಗೆ ವ್ಯಾಪಿಸಿದೆ. ಇದರ ಜೊತೆಗೆ, ನಾವು ವೈಯಕ್ತಿಕ ಸಹಾಯ, ಗ್ರಾಹಕ ಬೆಂಬಲ, ಬುಕ್ಕಿಂಗ್ ನಿರ್ವಹಣೆ ಮತ್ತು ಡిజಿಟಲ್ ಕಾರ್ಯಾಚರಣೆಗಳಿಗೆ ಉನ್ನತ ಮಟ್ಟದ AI ಏಜೆಂಟ್‌ಗಳನ್ನು ನಿರ್ಮಿಸುತ್ತಿದ್ದೇವೆ, ಇದು ವ್ಯವಹಾರಗಳು ಮತ್ತು ವ್ಯಕ್ತಿಗಳಿಗೆ ಹೆಚ್ಚಿನ ಕಾರ್ಯಕ್ಷಮತೆಯನ್ನು ಸಾಧಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ.ಮನೆಯಲ್ಲಿ, ನಮ್ಮ ರಿಷಿ AI ವೇದಿಕೆ ಸ್ಮಾರ್ಟ್ ಸ್ವಯಂಚಾಲನೆ ಮತ್ತು ವೈಯಕ್ತಿಕ ಸಹಾಯವನ್ನು ಸಾಧ್ಯವಾಗಿಸುತ್ತಿದ್ದು, ದೈನಂದಿನ ಜೀವನವನ್ನು ಇನ್ನಷ್ಟು ಸುಗಮ, ಸಂಪರ್ಕಿತ ಮತ್ತು ಬುದ್ಧಿವಂತವಾಗಿಸುತ್ತದೆ. ಒಟ್ಟಿಗೆ, ನಮ್ಮ ರೋಬೋಟಿಕ್ಸ್ ಮತ್ತು AI ವ್ಯವಸ್ಥೆಗಳು ಬುದ್ಧಿವಂತ ಮತ್ತು ಸಮೃದ್ಧ ಸಮಾಜದ ಆಧಾರದ ರೂಪಿಸುತ್ತಿವೆ.",
         aboutTagline: "ಮನೆಗಳು, ಕೈಗಾರಿಕೆಗಳು ಮತ್ತು ಕೃಷಿ ಕ್ಷೇತ್ರಗಳು ಅಭಿವೃದ್ಧಿ ಹೊಂದುತ್ತಿರುವ ಜಗತ್ತನ್ನು ನಿರ್ಮಿಸುತ್ತಿದ್ದೇವೆ, ಉಳಿದುದನ್ನು ನಮ್ಮ ರೋಬೋಟ್ಗಳು ಮತ್ತು ರಿಷಿ ಹೋಮ್ ಆಟೋಮೇಷನ್ ನಿರ್ವಹಿಸುತ್ತವೆ.",
         careersTitle: "ದೀರದಲ್ಲಿ ವೃತ್ತಿಗಳು",
         careersText: "ನಾವು ಸದಾ ಪ್ರತಿಭಾವಂತ ವ್ಯಕ್ತಿಗಳನ್ನು ನಮ್ಮ ತಂಡಕ್ಕೆ ಸೇರಿಸಿಕೊಳ್ಳಲು ಹುಡುಕುತ್ತಿದ್ದೇವೆ. ಉದ್ಯೋಗಾವಕಾಶಗಳು ಮತ್ತು ನಮ್ಮೊಂದಿಗೆ ಕೆಲಸ ಮಾಡುವ ಅವಕಾಶಗಳಿಗಾಗಿ ನಿರೀಕ್ಷಿಸಿ!",
@@ -153,7 +153,7 @@ const languages = {
         investorDesc: "ರೋಬೋಟಿಕ್ಸ್ ಮತ್ತು AI ಯ ಭವಿಷ್ಯವನ್ನು ರೂಪಿಸಲು ನಮ್ಮ ಜೊತೆ ಸೇರಿ—ನಿಮ್ಮ ಹೂಡಿಕೆ ಮಾನವ ಪ್ರಗತಿಯ ಮುಂದಿನ ಹೆಜ್ಜೆಗೆ ಇಂಧನವಾಗುತ್ತದೆ.",
         productTitle: "ಉತ್ಪನ್ನ ಮತ್ತು ಸೇವಾ ವಿಚಾರಣೆಗಳಿಗಾಗಿ",
         productDesc: "ನಮ್ಮ ರೋಬೋಟ್‌ಗಳು ಮತ್ತು AI ಏಜೆಟ್‌ಗಳು ನಿಮ್ಮ ಕೈಗಾರಿಕೆ, ಕೃಷಿ ಅಥವಾ ಮನೆಗೆ ಹೇಗೆ ಬದಲಾವಣೆ ತರುತ್ತವೆ ಎಂಬುದನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ—ನಮ್ಮ ತಂಡ ಸಹಾಯ ಮಾಡಲು ಇಲ್ಲಿದೆ.",
-        contactText: "ಪ್ರಶ್ನೆಗಳಿಗಾಗಿ ದಯವಿಟ್ಟು ನಮಗೆ <a href=\"mailto:info@deera.com\">info@deera.com</a> ಗೆ ಇಮೇಲ್ ಮಾಡಿ.",
+        contactText: "ಪ್ರಶ್ನೆಗಳಿಗಾಗಿ ದಯವಿಟ್ಟು ನಮಗೆ <a href=\"mailto:ceo@deera.live\">ceo@deera.live</a> ಗೆ ಇಮೇಲ್ ಮಾಡಿ.",
 
         // ✅ Products page
         productsTitle: "ನಮ್ಮ ಉತ್ಪನ್ನಗಳು",
@@ -456,6 +456,44 @@ function switchLanguage(lang) {
 window.addEventListener('load', () => {
     initSpaceBackground();
     switchLanguage(currentLang);
+    // Setup mobile menu toggle on pages that have a header-bar
+    const headerBar = document.querySelector('.header-bar');
+    if (headerBar && !document.querySelector('.mobile-menu-toggle')) {
+        const toggle = document.createElement('button');
+        toggle.className = 'mobile-menu-toggle';
+        toggle.setAttribute('aria-label', 'Open menu');
+        toggle.innerHTML = '<span>☰</span> Menu';
+        headerBar.prepend(toggle);
+        const nav = headerBar.querySelector('.main-nav');
+        const closeMenu = () => { if (nav) nav.classList.remove('open'); };
+        const openMenu = () => { if (nav) nav.classList.add('open'); };
+        toggle.addEventListener('click', () => {
+            if (!nav) return;
+            nav.classList.toggle('open');
+        });
+        // Close on navigation click
+        if (nav) {
+            nav.querySelectorAll('button').forEach(btn => {
+                btn.addEventListener('click', () => closeMenu());
+            });
+        }
+        // Close when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!nav) return;
+            const isToggle = toggle.contains(e.target);
+            const isNav = nav.contains(e.target);
+            const isMobile = window.matchMedia('(max-width: 768px)').matches;
+            if (isMobile && !isToggle && !isNav) {
+                closeMenu();
+            }
+        });
+        // Close on resize to desktop
+        window.addEventListener('resize', () => {
+            if (window.matchMedia('(min-width: 769px)').matches) {
+                closeMenu();
+            }
+        });
+    }
 });
 
 // Initialize Space Background
@@ -547,6 +585,44 @@ function createSpaceBackground() {
         }
     });
     
+    // Support pointer devices (covers mouse, touch, pen)
+    document.addEventListener('pointermove', (e) => {
+        mouseX = e.clientX / window.innerWidth - 0.5;
+        mouseY = e.clientY / window.innerHeight - 0.5;
+        if (!isAnimating) {
+            isAnimating = true;
+            requestAnimationFrame(updateStars);
+        }
+    }, { passive: true });
+    
+    // Touch support (for browsers not fully supporting pointer events)
+    const handleTouchMove = (e) => {
+        if (e.touches && e.touches.length > 0) {
+            const t = e.touches[0];
+            mouseX = t.clientX / window.innerWidth - 0.5;
+            mouseY = t.clientY / window.innerHeight - 0.5;
+            if (!isAnimating) {
+                isAnimating = true;
+                requestAnimationFrame(updateStars);
+            }
+        }
+    };
+    document.addEventListener('touchstart', handleTouchMove, { passive: true });
+    document.addEventListener('touchmove', handleTouchMove, { passive: true });
+    
+    // Device orientation fallback (tilt to parallax)
+    window.addEventListener('deviceorientation', (e) => {
+        // gamma: left-right [-90, 90], beta: front-back [-180, 180]
+        const gamma = (typeof e.gamma === 'number') ? e.gamma : 0;
+        const beta = (typeof e.beta === 'number') ? e.beta : 0;
+        mouseX = gamma / 180;   // approx -0.5..0.5
+        mouseY = beta / 360;    // approx -0.5..0.5
+        if (!isAnimating) {
+            isAnimating = true;
+            requestAnimationFrame(updateStars);
+        }
+    });
+    
     // Stop animation when mouse leaves window
     document.addEventListener('mouseleave', () => {
         isAnimating = false;
@@ -560,6 +636,19 @@ function createSpaceBackground() {
         document.getElementById('stars-container').style.background = 
             `radial-gradient(ellipse at ${x}% ${y}%, rgba(74, 20, 140, 0.2) 0%, rgba(0, 0, 0) 70%)`;
     });
+    // Mirror gradient changes for touch/pointer
+    const updateGradient = (clientX, clientY) => {
+        const x = clientX / window.innerWidth * 100;
+        const y = clientY / window.innerHeight * 100;
+        document.getElementById('stars-container').style.background = 
+            `radial-gradient(ellipse at ${x}% ${y}%, rgba(74, 20, 140, 0.2) 0%, rgba(0, 0, 0) 70%)`;
+    };
+    document.addEventListener('pointermove', (e) => updateGradient(e.clientX, e.clientY), { passive: true });
+    document.addEventListener('touchmove', (e) => {
+        if (e.touches && e.touches.length > 0) {
+            updateGradient(e.touches[0].clientX, e.touches[0].clientY);
+        }
+    }, { passive: true });
 }
 
 // --- Tesseract (4D Hypercube) Animation ---
@@ -669,4 +758,19 @@ window.addEventListener('load', () => {
     console.log('Window load event triggered');
     initSpaceBackground();
     switchLanguage(currentLang);
+});
+
+// Ensure page is visible and content refreshed when returning via mobile back/forward cache
+window.addEventListener('pageshow', (event) => {
+    if (document && document.body) {
+        document.body.classList.remove('fade-out');
+        document.body.classList.add('fade-in');
+    }
+    // Re-apply language to resync any dynamic text
+    try {
+        const lang = localStorage.getItem('deeraLang') || currentLang || 'en';
+        switchLanguage(lang);
+    } catch (e) {
+        // no-op
+    }
 });

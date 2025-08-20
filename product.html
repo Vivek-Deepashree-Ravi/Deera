@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -284,7 +286,14 @@
     </div>
     
     <div class="header-bar">
-        <button class="home-btn" onclick="window.location.href='index.html'"><span>🏠 Home</span></button>
+        <nav class="main-nav">
+            <button class="home-btn" aria-label="Home" onclick="fadeNavigate('index.html')"><i data-lucide="home"></i> <span>Home</span></button>
+            <button class="about-btn" aria-label="About" onclick="fadeNavigate('about.html')"><i data-lucide="info"></i> <span>About</span></button>
+            <button class="product-btn" aria-label="Product" onclick="fadeNavigate('product.html')"><i data-lucide="package"></i> <span>Product</span></button>
+            <button class="careers-btn" aria-label="Careers" onclick="fadeNavigate('careers.html')"><i data-lucide="briefcase"></i> <span>Careers</span></button>
+            <button class="contact-btn" aria-label="Contact" onclick="fadeNavigate('contact.html')"><i data-lucide="mail"></i> <span>Contact</span></button>
+            <button class="ai-btn" aria-label="AI" onclick="fadeNavigate('ai.html')"><i data-lucide="bot"></i> <span>AI</span></button>
+        </nav>
     </div>
 
     <div class="content">
@@ -318,6 +327,16 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        function fadeNavigate(url) {
+            document.body.classList.remove('fade-in');
+            document.body.classList.add('fade-out');
+            setTimeout(() => { window.location.href = url; }, 350);
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) window.lucide.createIcons();
+        });
+    </script>
     <script>
         // Create stars effect
         function createStars() {
